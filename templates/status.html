@@ -1,0 +1,22 @@
+{% extends "index.html" %}
+
+{% block content %}
+    <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">First Col</th>
+      <th scope="col">Second Col</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">Time</th>
+      <td>{{ time }}</td>
+    </tr>
+    <tr>
+      <th scope="row">User</th>
+      <td>{{ user }}</td>
+    </tr>
+  </tbody>
+</table>
+{% endblock %}
