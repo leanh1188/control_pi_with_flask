@@ -8,8 +8,11 @@
 
 {% block navbar %}
     {{ nav }}
-{% endblock navbar %}
+{% endblock %}
 
 {% block content %}
-     {{ nachricht }}
+    <div>
+        <h1 style="background-color: antiquewhite">Welcome To Raspberry Pi</h1>
+        <p style="float: right">Time on server: {{ time }}</p>
+    </div>
 {% endblock %}

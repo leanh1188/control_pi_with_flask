@@ -9,13 +9,14 @@ Bootstrap(app)
 @app.route('/')
 @app.route('/index')
 def index():
-    return render_template('index.html', nachricht='Hello World!')\
+    now = datetime.datetime.utcnow()
+    time = now.strftime('%d-%m-%Y %H:%M')
+    return render_template('index.html', time=time)\
 
 @app.route('/status')
 def status():
-    time = datetime.datetime.utcnow()
     user = os.getlogin()
-    return render_template('status.html', time=time, user=user)
+    return render_template('status.html', user=user)
 
 
 if __name__ == '__main__':
